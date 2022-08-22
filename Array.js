@@ -37,7 +37,7 @@ Array.prototype.forEachParallelAsync = async function (callback, thisArg) {
 };
 
 // Asynchronously iterates through an array in synchronous batches of size iterations, synchronously executing the callback for each value.
-Array.prototype.forEachThrottledAsync = async function (iterations = 1000, callback, thisArg) {
+Array.prototype.forEachThrottledAsync = async function (iterations, callback, thisArg) {
     // Ensure iterations is a positive integer
     if (typeof iterations !== 'number' || iterations < 1)
         throw new Error('Array.forEachThrottledAsync: iterations must be a positive integer');
